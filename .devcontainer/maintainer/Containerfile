@@ -6,6 +6,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /workspace
 
-RUN pip install --upgrade pip hatch
+RUN pip install --upgrade pip hatch ruff black mypy
 
 USER vscode

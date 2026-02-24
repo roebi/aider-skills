@@ -19,10 +19,10 @@ import click
 from .discover import discover_skills
 from .render import to_conventions, to_tmpfile, to_xml
 
-
 # ---------------------------------------------------------------------------
 # CLI root
 # ---------------------------------------------------------------------------
+
 
 @click.group()
 @click.version_option(package_name="aider-skills")
@@ -42,6 +42,7 @@ def main() -> None:
 # ---------------------------------------------------------------------------
 # to-prompt
 # ---------------------------------------------------------------------------
+
 
 @main.command("to-prompt")
 @click.argument("skills_dirs", nargs=-1, required=True, metavar="SKILLS_DIR...")
@@ -74,6 +75,7 @@ def to_prompt(skills_dirs: tuple[str, ...], no_location: bool) -> None:
 # ---------------------------------------------------------------------------
 # to-conventions
 # ---------------------------------------------------------------------------
+
 
 @main.command("to-conventions")
 @click.argument("skills_dirs", nargs=-1, required=True, metavar="SKILLS_DIR...")
@@ -121,6 +123,7 @@ def to_conventions_cmd(
 # tmpfile
 # ---------------------------------------------------------------------------
 
+
 @main.command("tmpfile")
 @click.argument("skills_dirs", nargs=-1, required=True, metavar="SKILLS_DIR...")
 @click.option(
@@ -156,6 +159,7 @@ def tmpfile_cmd(skills_dirs: tuple[str, ...], fmt: str) -> None:
 # list
 # ---------------------------------------------------------------------------
 
+
 @main.command("list")
 @click.argument("skills_dirs", nargs=-1, required=True, metavar="SKILLS_DIR...")
 def list_cmd(skills_dirs: tuple[str, ...]) -> None:
@@ -183,6 +187,7 @@ def list_cmd(skills_dirs: tuple[str, ...]) -> None:
 # validate
 # ---------------------------------------------------------------------------
 
+
 @main.command("validate")
 @click.argument("skill_dir", metavar="SKILL_DIR")
 def validate_cmd(skill_dir: str) -> None:
@@ -208,6 +213,7 @@ def validate_cmd(skill_dir: str) -> None:
         errors.append("Missing SKILL.md")
     else:
         import yaml
+
         content = skill_md.read_text(encoding="utf-8")
         if not content.startswith("---"):
             errors.append("SKILL.md has no YAML frontmatter (expected --- block)")

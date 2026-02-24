@@ -7,4 +7,3 @@ AI pair programming sessions via /run, conventions files, or --read.
 
 __version__ = "0.1.0"
 __all__ = ["discover", "render"]
-

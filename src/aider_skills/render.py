@@ -12,10 +12,10 @@ from pathlib import Path
 
 from .discover import SkillMeta
 
-
 # ---------------------------------------------------------------------------
 # XML format  (matches agentskills.io spec, Claude-optimised)
 # ---------------------------------------------------------------------------
+
 
 def to_xml(skills: list[SkillMeta], *, include_location: bool = True) -> str:
     """
@@ -43,6 +43,7 @@ def to_xml(skills: list[SkillMeta], *, include_location: bool = True) -> str:
 # ---------------------------------------------------------------------------
 # Conventions format  (plain text, for CONVENTIONS.md injection)
 # ---------------------------------------------------------------------------
+
 
 def to_conventions(skills: list[SkillMeta]) -> str:
     """
@@ -73,6 +74,7 @@ def to_conventions(skills: list[SkillMeta]) -> str:
 # Temp file  (for aider --read $(aider-skills tmpfile ./skills))
 # ---------------------------------------------------------------------------
 
+
 def to_tmpfile(skills: list[SkillMeta], *, fmt: str = "xml") -> Path:
     """
     Write rendered skills to a named temp file and return its path.
@@ -102,11 +104,7 @@ def to_tmpfile(skills: list[SkillMeta], *, fmt: str = "xml") -> Path:
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _esc(text: str) -> str:
     """Minimal XML escaping for skill names and descriptions."""
-    return (
-        text
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-    )
+    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
