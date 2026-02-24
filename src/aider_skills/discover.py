@@ -68,8 +68,8 @@ def discover_skills(skills_dirs: list[str | Path]) -> list[SkillMeta]:
 
             skill_md = entry / "SKILL.md"
             meta = _parse_frontmatter(skill_md)
-            name = meta.get("name") or entry.name
-            description = meta.get("description") or ""
+            name = str(meta.get("name") or entry.name)
+            description = str(meta.get("description") or "")
 
             skills.append(
                 SkillMeta(
