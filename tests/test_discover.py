@@ -2,8 +2,6 @@
 
 from pathlib import Path
 
-import pytest
-
 from aider_skills.discover import discover_skills
 
 
