@@ -24,7 +24,7 @@ class SkillMeta:
         return str(self.skill_md.resolve())
 
 
-def _parse_frontmatter(skill_md: Path) -> dict:
+def _parse_frontmatter(skill_md: Path) -> dict[str, object]:
     """Extract YAML frontmatter from a SKILL.md file."""
     content = skill_md.read_text(encoding="utf-8")
     if not content.startswith("---"):
