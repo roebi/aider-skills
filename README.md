@@ -3,7 +3,7 @@
 > [Agent Skills](https://agentskills.io) integration for [aider](https://aider.chat) —
 > inject structured skills into your AI pair programming sessions with zero aider changes.
 
-[![CI](https://github.com/YOUR_USERNAME/aider-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/aider-skills/actions/workflows/ci.yml)
+[![CI](https://github.com/roebi/aider-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/aider-skills/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/aider-skills)](https://pypi.org/project/aider-skills/)
 [![Python](https://img.shields.io/pypi/pyversions/aider-skills)](https://pypi.org/project/aider-skills/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
