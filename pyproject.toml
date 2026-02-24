@@ -12,7 +12,7 @@ requires-python = ">=3.10"
 authors = [
     { name = "Robert Halter", email = "roebi@users.noreply.github.com" }
 ]
-keywords = ["aider", "agent-skills", "llm", "ai", "coding-assistant"]
+keywords = ["aider", "aider-chat", "agent-skills", "llm", "ai", "coding-assistant"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Environment :: Console",
@@ -27,9 +27,9 @@ classifiers = [
 ]
 dependencies = [
     "pyyaml>=6.0",
-    "click>=8.0",
+    "click>=8.0"
     # Wrap skills-ref for spec-compliant discovery
-    "skills-ref @ git+https://github.com/agentskills/agentskills.git#subdirectory=skills-ref",
+    # "skills-ref @ git+https://github.com/agentskills/agentskills.git#subdirectory=skills-ref",
 ]
 
 [project.optional-dependencies]
