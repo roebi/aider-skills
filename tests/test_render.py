@@ -2,13 +2,13 @@
 
 from pathlib import Path
 
-import pytest
-
 from aider_skills.discover import SkillMeta
 from aider_skills.render import to_conventions, to_tmpfile, to_xml
 
 
-def fake_skill(name: str, description: str = "A skill", path: str = "/skills") -> SkillMeta:
+def fake_skill(
+    name: str, description: str = "A skill", path: str = "/skills"
+) -> SkillMeta:
     p = Path(path) / name
     return SkillMeta(
         name=name,
