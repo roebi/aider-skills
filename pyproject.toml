@@ -12,7 +12,7 @@ requires-python = ">=3.10"
 authors = [
     { name = "Robert Halter", email = "roebi@users.noreply.github.com" }
 ]
-keywords = ["aider", "aider-chat", "agent-skills", "llm", "ai", "coding-assistant"]
+keywords = ["aider-skills", "aider", "aider-chat", "agent-skills", "llm", "ai", "coding-assistant"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Environment :: Console",
