@@ -10,7 +10,7 @@ readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 authors = [
-    { name = "Your Name", email = "you@example.com" }
+    { name = "Robert Halter", email = "roebi@users.noreply.github.com" }
 ]
 keywords = ["aider", "agent-skills", "llm", "ai", "coding-assistant"]
 classifiers = [
@@ -46,13 +46,16 @@ dev = [
 aider-skills = "aider_skills.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/aider-skills"
-Documentation = "https://github.com/YOUR_USERNAME/aider-skills/blob/main/docs/aider-integration.md"
-Issues = "https://github.com/YOUR_USERNAME/aider-skills/issues"
-Changelog = "https://github.com/YOUR_USERNAME/aider-skills/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/roebi/aider-skills"
+Documentation = "https://github.com/roebi/aider-skills/blob/main/docs/aider-integration.md"
+Issues = "https://github.com/roebi/aider-skills/issues"
+Changelog = "https://github.com/roebi/aider-skills/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/aider_skills"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.black]
 line-length = 88
