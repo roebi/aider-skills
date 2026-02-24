@@ -85,7 +85,7 @@ def to_prompt(skills_dirs: tuple[str, ...], no_location: bool) -> None:
     help="Append directly to a file (e.g. CONVENTIONS.md) instead of stdout.",
 )
 def to_conventions_cmd(
-    skills_dirs: tuple[str, ...], conventions_file: str | None) -> None
+    skills_dirs: tuple[str, ...], conventions_file: str | None
 ) -> None:
     """
     Print a markdown skills block suitable for CONVENTIONS.md.
@@ -194,6 +194,8 @@ def validate_cmd(skill_dir: str) -> None:
     \b
         aider-skills validate ./my-skills/my-python-skill
     """
+    import yaml
+
     path = Path(skill_dir).expanduser().resolve()
     errors: list[str] = []
 
