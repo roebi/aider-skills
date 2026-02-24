@@ -5,11 +5,11 @@ Wraps skills-ref where possible, falls back to direct parsing.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from pathlib import Path
-from collections.abc import Iterator
+from collections.abc import Iterator   # stdlib (collections)
+from dataclasses import dataclass      # stdlib
+from pathlib import Path               # stdlib
 
-import yaml
+import yaml                            # third-party
 
 
 @dataclass
