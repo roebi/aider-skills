@@ -84,7 +84,9 @@ def to_prompt(skills_dirs: tuple[str, ...], no_location: bool) -> None:
     metavar="FILE",
     help="Append directly to a file (e.g. CONVENTIONS.md) instead of stdout.",
 )
-def to_conventions_cmd(skills_dirs: tuple[str, ...], conventions_file: str | None) -> None:
+def to_conventions_cmd(
+    skills_dirs: tuple[str, ...], conventions_file: str | None) -> None
+) -> None:
     """
     Print a markdown skills block suitable for CONVENTIONS.md.
 
